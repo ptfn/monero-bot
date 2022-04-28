@@ -25,7 +25,7 @@ def monero():
     high = dq["high"]
     price = ds["monero"]["usd"]
 
-    return f"Price = {price}\nLow Price = {low}\nHigh Price = {high}\nHeight = {height}\nHashrate = {hashrate / 1000**3}\nDifficulty = {difficulty / 1000**3}"
+    return f"Price = {price}$\nLow Price = {low} $\nHigh Price = {high} $\nHeight = {height}\nHashrate = {hashrate / 1000**3} Gh/s\nDifficulty = {difficulty / 1000**3} G"
 
 
 def request(monero):
