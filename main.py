@@ -5,8 +5,7 @@ import schedule
 
 
 token = os.getenv('TOKEN')
-# url = "https://botsin.space/api/v1/statuses"
-url = "https://mastodon.ml/api/v1/statuses"
+url = "https://mastodon.online/api/v1/statuses"
 
 
 def monero():
@@ -25,7 +24,7 @@ def monero():
     high = dq["high"]
     price = ds["monero"]["usd"]
 
-    return f"Price = {price}$\nLow Price = {low} $\nHigh Price = {high} $\nHeight = {height}\nHashrate = {hashrate / 1000**3} Gh/s\nDifficulty = {difficulty / 1000**3} G"
+    return f"Price = {price}$\nLow Price = {low} $\nHigh Price = {high} $\nHeight = {height}\nHashrate = {round(hashrate / 1000**3, 2)} Gh/s\nDifficulty = {round(difficulty / 1000**3, 2)} G\n\n#monero #xmr #coin #cryptocurrency"
 
 
 def request(monero):
@@ -35,7 +34,7 @@ def request(monero):
 
 
 def main():
-    schedule.every(5).seconds.do(request, monero)
+    schedule.every().day.at("18:00").do(request, monero)
 
     while True:
         try:
