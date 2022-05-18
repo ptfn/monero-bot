@@ -1,7 +1,7 @@
 .PHONY: install
 install:
 	pip3 install -r requirements.txt
-	cp mastodon_bot.service /etc/systemd/system/monero_bot.service
+	cp monero_bot.service /etc/systemd/system/monero_bot.service
 	systemctl daemon-reload
 
 .PHONY: restart
