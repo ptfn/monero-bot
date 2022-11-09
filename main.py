@@ -89,7 +89,7 @@ def main():
             logging.error(f"Request Error! {e}")
 
         finally:
-            time.sleep(30)
+            time.sleep(1)
 
 
 if __name__ == "__main__":
