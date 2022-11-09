@@ -88,9 +88,6 @@ def main():
         except Exception as e:
             logging.error(f"Request Error! {e}")
 
-        else:
-            logging.info("Request Ok!")
-
         finally:
             time.sleep(15)
 
